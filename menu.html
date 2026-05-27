@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Меню | Golubev Coffee</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/ui/logo.svg" sizes="any">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages/menu.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <section class="menu">
+    <div class="container">
+      <h1>Наше Меню</h1>
+
+      <div class="custom-select-wrapper">
+        <div class="custom-select-trigger">
+          <span>Все</span>
+          <div class="custom-select-arrow">☕</div>
+        </div>
+        <div class="custom-select-options">
+          <div class="custom-option active" data-value="all">Все</div>
+          <div class="custom-option" data-value="coffee">Кофе</div>
+          <div class="custom-option" data-value="pastry">Выпечка</div>
+          <div class="custom-option" data-value="dessert">Десерты</div>
+        </div>
+      </div>
+
+      <div class="menu-filters">
+        <button class="filter-btn active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="coffee">Кофе</button>
+        <button class="filter-btn" data-filter="pastry">Выпечка</button>
+        <button class="filter-btn" data-filter="dessert">Десерты</button>
+      </div>
+
+      <div class="combo-section">
+        <h2 class="combo-title">Выгодные Комбо</h2>
+        <div class="combo-grid">
+          <div class="combo-card">
+            <div class="combo-images">
+              <img src="assets/images/menu/turkish_coffee.png" alt="Кофе по-турецки" class="combo-img combo-img-back">
+              <img src="assets/images/menu/custard_danish.png" alt="Датская слойка" class="combo-img combo-img-front">
+            </div>
+            <div class="combo-info">
+              <h3>Кофе по-турецки + Датская слойка</h3>
+              <div class="combo-prices">
+                <span class="combo-old-price">320₽</span>
+                <span class="combo-price">269₽</span>
+              </div>
+            </div>
+          </div>
+          <div class="combo-card">
+            <div class="combo-images">
+              <img src="assets/images/menu/raf_coffee.png" alt="Раф-кофе" class="combo-img combo-img-back">
+              <img src="assets/images/menu/sausage-in-puff-pastry.png" alt="Сосиска в тесте" class="combo-img combo-img-front">
+            </div>
+            <div class="combo-info">
+              <h3>Раф + Сосиска в тесте</h3>
+              <div class="combo-prices">
+                <span class="combo-old-price">310₽</span>
+                <span class="combo-price">255₽</span>
+              </div>
+            </div>
+          </div>
+          <div class="combo-card">
+            <div class="combo-images">
+              <img src="assets/images/menu/iced_latte.png" alt="Айс-латте" class="combo-img combo-img-back">
+              <img src="assets/images/menu/croissant.png" alt="Круассан" class="combo-img combo-img-front">
+            </div>
+            <div class="combo-info">
+              <h3>Айс-латте + Круассан</h3>
+              <div class="combo-prices">
+                <span class="combo-old-price">350₽</span>
+                <span class="combo-price">305₽</span>
+              </div>
+            </div>
+          </div>
+          <div class="combo-card">
+            <div class="combo-images">
+              <img src="assets/images/menu/latte.png" alt="Латте" class="combo-img combo-img-back">
+              <img src="assets/images/menu/chocolate_brownie.png" alt="Брауни" class="combo-img combo-img-front">
+            </div>
+            <div class="combo-info">
+              <h3>Латте + Брауни</h3>
+              <div class="combo-prices">
+                <span class="combo-old-price">380₽</span>
+                <span class="combo-price">318₽</span>
+              </div>
+            </div>
+          </div>
+          <div class="combo-card">
+            <div class="combo-images">
+              <img src="assets/images/menu/doppio_espresso.png" alt="Доппио" class="combo-img combo-img-back">
+              <img src="assets/images/menu/carrot_cake.png" alt="Морковный торт" class="combo-img combo-img-front">
+            </div>
+            <div class="combo-info">
+              <h3>Доппио + Морковный торт</h3>
+              <div class="combo-prices">
+                <span class="combo-old-price">360₽</span>
+                <span class="combo-price">318₽</span>
+              </div>
+            </div>
+          </div>
+          <div class="combo-card">
+            <div class="combo-images">
+              <img src="assets/images/menu/cappuccino.png" alt="Капучино" class="combo-img combo-img-back">
+              <img src="assets/images/menu/chocolate_muffin.png" alt="Шоколадный маффин" class="combo-img combo-img-front">
+            </div>
+            <div class="combo-info">
+              <h3>Капучино + Шоколадный маффин</h3>
+              <div class="combo-prices">
+                <span class="combo-old-price">330₽</span>
+                <span class="combo-price">299₽</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-grid" id="menuGrid">
+        <div class="card" data-category="coffee">
+          <img src="assets/images/menu/espresso.png" alt="Эспрессо">
+          <span class="badge">Хит</span>
+          <h3>Эспрессо</h3>
+          <p>Классический крепкий кофе</p>
+          <div class="price">120₽</div>
+        </div>
+        <div class="card" data-category="coffee">
+          <img src="assets/images/menu/doppio_espresso.png" alt="Доппио">
+          <h3>Доппио</h3>
+          <p>Двойной эспрессо для бодрости</p>
+          <div class="price">150₽</div>
+        </div>
+        <div class="card" data-category="coffee">
+          <img src="assets/images/menu/americano.png" alt="Американо">
+          <h3>Американо</h3>
+          <p>Мягкий кофе с добавлением воды</p>
+          <div class="price">130₽</div>
+        </div>
+        <div class="card" data-category="coffee">
+          <img src="assets/images/menu/cappuccino.png" alt="Капучино">
+          <span class="badge">Хит</span>
+          <h3>Капучино</h3>
+          <p>Эспрессо с нежной молочной пенкой</p>
+          <div class="price">180₽</div>
+        </div>
+        <div class="card" data-category="coffee">
+          <img src="assets/images/menu/latte.png" alt="Латте">
+          <span class="badge">Популярный</span>
+          <h3>Латте</h3>
+          <p>Мягкий кофейно-молочный напиток</p>
+          <div class="price">190₽</div>
+        </div>
+        <div class="card" data-category="coffee">
+          <img src="assets/images/menu/iced_latte.png" alt="Айс-латте">
+          <h3>Айс-латте</h3>
+          <p>Освежающий холодный кофе</p>
+          <div class="price">210₽</div>
+        </div>
+        <div class="card" data-category="coffee">
+          <img src="assets/images/menu/raf_coffee.png" alt="Раф-кофе">
+          <span class="badge">Новинка</span>
+          <h3>Раф-кофе</h3>
+          <p>Сливочный, мягкий кофейный напиток</p>
+          <div class="price">220₽</div>
+        </div>
+        <div class="card" data-category="coffee">
+          <img src="assets/images/menu/flat_white.png" alt="Флэт Уайт">
+          <h3>Флэт Уайт</h3>
+          <p>Двойной эспрессо с бархатистым молоком</p>
+          <div class="price">200₽</div>
+        </div>
+        <div class="card" data-category="coffee">
+          <img src="assets/images/menu/glace_coffee.png" alt="Глясе">
+          <h3>Глясе</h3>
+          <p>Кофе с шариком мороженого</p>
+          <div class="price">230₽</div>
+        </div>
+        <div class="card" data-category="coffee">
+          <img src="assets/images/menu/turkish_coffee.png" alt="Турецкий кофе">
+          <h3>Кофе по-турецки</h3>
+          <p>Настоящий восточный кофе</p>
+          <div class="price">160₽</div>
+        </div>
+        <div class="card" data-category="pastry">
+          <img src="assets/images/menu/croissant.png" alt="Круассан">
+          <span class="badge">Хит</span>
+          <h3>Круассан</h3>
+          <p>Воздушный французский круассан</p>
+          <div class="price">140₽</div>
+        </div>
+        <div class="card" data-category="pastry">
+          <img src="assets/images/menu/sausage-in-puff-pastry.png" alt="Сосиска в тесте">
+          <span class="badge">Акция</span>
+          <h3>Сосиска в тесте</h3>
+          <p>Горячая выпечка — 3-я бесплатно</p>
+          <div class="price">90₽</div>
+        </div>
+        <div class="card" data-category="pastry">
+          <img src="assets/images/menu/cinnamon_roll.png" alt="Синнабон">
+          <h3>Синнабон</h3>
+          <p>Булочка с корицей и глазурью</p>
+          <div class="price">170₽</div>
+        </div>
+        <div class="card" data-category="pastry">
+          <img src="assets/images/menu/cherry_puff_pastry.png" alt="Слойка с вишней">
+          <h3>Слойка с вишней</h3>
+          <p>Сладкая слоёная выпечка</p>
+          <div class="price">130₽</div>
+        </div>
+        <div class="card" data-category="pastry">
+          <img src="assets/images/menu/apple_puff_pastry.png" alt="Слойка с яблоком">
+          <h3>Слойка с яблоком</h3>
+          <p>Нежная слойка с яблочной начинкой</p>
+          <div class="price">130₽</div>
+        </div>
+        <div class="card" data-category="pastry">
+          <img src="assets/images/menu/cottage_cheese_pastry.png" alt="Ватрушка">
+          <h3>Ватрушка</h3>
+          <p>С творогом и изюмом</p>
+          <div class="price">110₽</div>
+        </div>
+        <div class="card" data-category="pastry">
+          <img src="assets/images/menu/chocolate_braided_pastry.png" alt="Шоколадная косичка">
+          <h3>Шоколадная косичка</h3>
+          <p>Плетёнка с шоколадной начинкой</p>
+          <div class="price">150₽</div>
+        </div>
+        <div class="card" data-category="pastry">
+          <img src="assets/images/menu/custard_danish.png" alt="Датская слойка">
+          <h3>Датская слойка</h3>
+          <p>С заварным кремом</p>
+          <div class="price">160₽</div>
+        </div>
+        <div class="card" data-category="pastry">
+          <img src="assets/images/menu/poppy_seed_bun.png" alt="Булочка с маком">
+          <h3>Булочка с маком</h3>
+          <p>Ароматная выпечка из детства</p>
+          <div class="price">100₽</div>
+        </div>
+        <div class="card" data-category="pastry">
+          <img src="assets/images/menu/chocolate_muffin.png" alt="Маффин">
+          <h3>Шоколадный маффин</h3>
+          <p>Влажный, насыщенный шоколадом</p>
+          <div class="price">150₽</div>
+        </div>
+        <div class="card" data-category="dessert">
+          <img src="assets/images/menu/cheesecake.png" alt="Чизкейк">
+          <span class="badge">Хит</span>
+          <h3>Чизкейк</h3>
+          <p>Нежный сливочный десерт</p>
+          <div class="price">220₽</div>
+        </div>
+        <div class="card" data-category="dessert">
+          <img src="assets/images/menu/tiramisu.png" alt="Тирамису">
+          <h3>Тирамису</h3>
+          <p>Классический итальянский десерт</p>
+          <div class="price">250₽</div>
+        </div>
+        <div class="card" data-category="dessert">
+          <img src="assets/images/menu/chocolate_brownie.png" alt="Брауни">
+          <h3>Брауни</h3>
+          <p>Шоколадный десерт с орехами</p>
+          <div class="price">190₽</div>
+        </div>
+        <div class="card" data-category="dessert">
+          <img src="assets/images/menu/carrot_cake.png" alt="Морковный торт">
+          <h3>Морковный торт</h3>
+          <p>С орехами и сливочным кремом</p>
+          <div class="price">210₽</div>
+        </div>
+        <div class="card" data-category="dessert">
+          <img src="assets/images/menu/red_velvet_cake.png" alt="Красный бархат">
+          <h3>Красный бархат</h3>
+          <p>Легендарный торт с крем-чизом</p>
+          <div class="price">240₽</div>
+        </div>
+        <div class="card" data-category="dessert">
+          <img src="assets/images/menu/napoleon_cake.png" alt="Наполеон">
+          <h3>Наполеон</h3>
+          <p>Слоёный торт с заварным кремом</p>
+          <div class="price">200₽</div>
+        </div>
+        <div class="card" data-category="dessert">
+          <img src="assets/images/menu/honey_cake.png" alt="Медовик">
+          <h3>Медовик</h3>
+          <p>Нежный медовый торт</p>
+          <div class="price">180₽</div>
+        </div>
+        <div class="card" data-category="dessert">
+          <img src="assets/images/menu/chocolate_eclair.png" alt="Эклер">
+          <h3>Эклер</h3>
+          <p>Шоколадный заварной десерт</p>
+          <div class="price">160₽</div>
+        </div>
+        <div class="card" data-category="dessert">
+          <img src="assets/images/menu/french_macarons.png" alt="Макарон">
+          <h3>Макарон</h3>
+          <p>Французское миндальное пирожное</p>
+          <div class="price">170₽</div>
+        </div>
+        <div class="card" data-category="dessert">
+          <img src="assets/images/menu/berry_tartlet.png" alt="Ягодный тарт">
+          <h3>Ягодный тарт</h3>
+          <p>Корзиночка со свежими ягодами</p>
+          <div class="price">190₽</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

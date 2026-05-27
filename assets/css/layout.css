@@ -1,0 +1,48 @@
+  
+/* =========================
+   HEADER LAYOUT
+========================= */
+
+/* NOTE: avoid conflicting with .site-header in components */
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* Logo (layout-level only sizing behavior) */
+.logo-img {
+  height: 100px;
+  width: auto;
+  display: block;
+}
+
+/* Navigation layout */
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  transition: var(--transition);
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+/* =========================
+   RESPONSIVE SAFETY (minimal fix)
+========================= */
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

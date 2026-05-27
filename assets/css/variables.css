@@ -1,0 +1,17 @@
+:root {
+  /* Насыщенная, дорогая кофейная палитра */
+  --primary: #A87D59;       /* light mocha accent */
+  --secondary: #D8C2A1;     /* latte cream */
+  --dark: #5A402B;          /* espresso brown */
+  --light: #FBF4E8;         /* soft milk cream */
+  --surface: #FFF7EE;
+  --muted: #8F7A65;
+
+  /* Шрифты */
+  --font-title: 'Comfortaa', sans-serif;
+  --font-text: 'Comfortaa', sans-serif;
+
+  --radius: 14px;
+  --transition: 0.25s ease;
+  --container-width: 1200px;
+}

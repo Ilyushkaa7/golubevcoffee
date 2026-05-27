@@ -1,0 +1,356 @@
+/* ==========================================================================
+   СТРАНИЦА МЕНЮ (ПОЛНЫЙ СТИЛЕВОЙ ФАЙЛ)
+   ========================================================================== */
+
+.menu {
+  padding: 120px 0 60px;
+  background: var(--light);
+  min-height: 100vh;
+  display: block !important;
+}
+
+.menu h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 36px;
+  font-family: var(--font-title);
+  color: var(--dark);
+}
+
+/* --------------------------------------------------------------------------
+   КРАСИВЫЙ КАСТОМНЫЙ СЕЛЕКТ (ЭСТЕТИКА МАКЕТА)
+   -------------------------------------------------------------------------- */
+.custom-select-wrapper {
+  display: none; /* По умолчанию скрыт на десктопе, включится в медиа-запросах */
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto 35px auto;
+  position: relative;
+  font-family: 'Comfortaa', sans-serif;
+  z-index: 100;
+}
+
+.custom-select-trigger {
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFFDFB;
+  background: linear-gradient(135deg, var(--primary), #8f6e56);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(90, 64, 43, 0.14);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.custom-select-trigger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(45, 27, 24, 0.3);
+}
+
+.custom-select-arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.custom-select-trigger.active .custom-select-arrow {
+  transform: rotate(180deg);
+}
+
+/* Выпадающий список категорий */
+.custom-select-options {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #9f7c61, #bfa88a);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.16);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-select-options.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.custom-option {
+  padding: 14px 24px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.custom-option:last-child {
+  border-bottom: none;
+}
+
+.custom-option:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFDFB;
+  padding-left: 30px;
+}
+
+.custom-option.active {
+  background: rgba(255, 255, 255, 0.15);
+  color: #FFFDFB;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   ДЕСКТOПНЫЕ ФИЛЬТРЫ
+   -------------------------------------------------------------------------- */
+.menu-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  padding: 12px 26px;
+  background: var(--surface);
+  border: 2px solid rgba(110, 78, 59, 0.15);
+  border-radius: 50px;
+  font-family: var(--font-title);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark);
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: 0.5px;
+}
+
+.filter-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(110, 78, 59, 0.12);
+}
+
+.filter-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  box-shadow: 0 6px 16px rgba(110, 78, 59, 0.25);
+}
+
+/* --------------------------------------------------------------------------
+   КОМБО-СЕКЦИЯ
+   -------------------------------------------------------------------------- */
+.combo-section {
+  margin-bottom: 50px;
+}
+
+.combo-section.hidden {
+  display: none !important;
+}
+
+.combo-title {
+  text-align: center;
+  font-family: var(--font-title);
+  font-size: 24px;
+  color: var(--dark);
+  margin-bottom: 28px;
+}
+
+.combo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.combo-card {
+  background: linear-gradient(135deg, var(--surface), #fffdf8);
+  border: 2px solid rgba(110, 78, 59, 0.12);
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(110, 78, 59, 0.08);
+}
+
+.combo-card::before {
+  content: 'КОМБО';
+  position: absolute;
+  top: 14px;
+  right: -32px;
+  background: var(--primary);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 40px;
+  transform: rotate(45deg);
+  letter-spacing: 1px;
+}
+
+.combo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(90, 64, 43, 0.12);
+  border-color: var(--primary);
+}
+
+.combo-images {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 16px;
+}
+
+.combo-img {
+  width: 135px;
+  height: 135px;
+  object-fit: cover;
+  border-radius: 20px;
+  position: absolute;
+  box-shadow: 0 4px 14px rgba(45, 27, 24, 0.08);
+}
+
+.combo-img-back {
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.combo-img-front {
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  border: 4px solid white;
+}
+
+.combo-info h3 {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 16px;
+  color: #2D1B18;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+.combo-prices {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.combo-old-price {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 15px;
+  color: #BCAAA4;
+  text-decoration: line-through;
+}
+
+.combo-price {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #D87040;
+}
+
+/* --------------------------------------------------------------------------
+   СЕТКА СТАНДАРТНЫХ ТОВАРОВ И АНИМАЦИИ
+   -------------------------------------------------------------------------- */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(90, 64, 43, 0.08);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: menuFadeInUp 0.5s ease forwards !important;
+  opacity: 0;
+}
+
+@keyframes menuFadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card:nth-child(1) { animation-delay: 0.05s; }
+.card:nth-child(2) { animation-delay: 0.1s; }
+.card:nth-child(3) { animation-delay: 0.15s; }
+.card:nth-child(4) { animation-delay: 0.2s; }
+
+/* ==========================================================================
+   MEDIA QUERIES (Адаптация под мобильные экраны)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .menu { 
+    padding-top: 40px; 
+  }
+  .menu h1 { 
+    font-size: 28px; 
+  }
+  
+  /* Скрываем кнопки фильтров, выводим красивый кофейный селект */
+  .menu-filters { 
+    display: none !important; 
+  }
+  .custom-select-wrapper { 
+    display: block !important; 
+  }
+  
+  .combo-grid { 
+    grid-template-columns: 1fr; 
+    gap: 16px; 
+  }
+  .combo-images { 
+    width: 160px; 
+    height: 160px; 
+  }
+  .combo-img { 
+    width: 120px; 
+    height: 120px; 
+  }
+  .menu-grid { 
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+    gap: 16px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .menu h1 { 
+    font-size: 24px; 
+  }
+  .combo-title { 
+    font-size: 20px; 
+  }
+  .combo-images { 
+    width: 140px; 
+    height: 140px; 
+  }
+  .combo-img { 
+    width: 110px; 
+    height: 110px; 
+  }
+  .menu-grid { 
+    grid-template-columns: 1fr 1fr; 
+    gap: 12px; 
+  }
+}
