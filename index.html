@@ -13,13 +13,14 @@
 
   <link rel="stylesheet" href="assets/css/pages/home.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/redesign.css">
 </head>
 
 <body class="home-page">
 
   <div class="video-background">
-    <video autoplay muted loop playsinline poster="assets/images/ui/banner.png">
-      <source src="assets/video/golubev-coffee-street.mov">
+    <video autoplay muted loop playsinline preload="none" poster="assets/images/optimized/home-poster.jpg">
+      <source data-src="assets/video/golubev-coffee-street.mov" type="video/quicktime">
     </video>
 
     <div class="video-overlay"></div>
@@ -30,6 +31,16 @@
       <img src="assets/images/ui/logo.svg" alt="Golubev Coffee" class="logo-img">
     </a>
   </div>
+
+  <main class="home-hero">
+    <p class="home-kicker">Ivanovo coffee project</p>
+    <h1>Golubev Coffee</h1>
+    <p class="home-copy">Авторская кофейня, выросшая из учебной идеи в самостоятельный сайт с меню, историей бренда и живой визуальной подачей.</p>
+    <div class="home-actions">
+      <a href="menu.html" class="home-action home-action-primary">Открыть меню</a>
+      <a href="about.html" class="home-action">История проекта</a>
+    </div>
+  </main>
 
   <div class="home-nav-wrapper">
     <nav class="home-nav">

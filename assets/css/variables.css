@@ -1,17 +1,23 @@
 :root {
-  /* Насыщенная, дорогая кофейная палитра */
-  --primary: #A87D59;       /* light mocha accent */
-  --secondary: #D8C2A1;     /* latte cream */
-  --dark: #5A402B;          /* espresso brown */
-  --light: #FBF4E8;         /* soft milk cream */
-  --surface: #FFF7EE;
-  --muted: #8F7A65;
+  --primary: #B96F3D;
+  --primary-dark: #7B3F24;
+  --secondary: #D9B56F;
+  --accent: #285A4B;
+  --accent-soft: #DCE8DF;
+  --dark: #201A16;
+  --ink: #342820;
+  --light: #F7F1E8;
+  --surface: #FFFDFC;
+  --surface-strong: #F0E3D2;
+  --muted: #786A5E;
+  --line: rgba(32, 26, 22, 0.12);
+  --shadow: 0 18px 48px rgba(32, 26, 22, 0.12);
 
   /* Шрифты */
   --font-title: 'Comfortaa', sans-serif;
   --font-text: 'Comfortaa', sans-serif;
 
-  --radius: 14px;
+  --radius: 18px;
   --transition: 0.25s ease;
   --container-width: 1200px;
 }
