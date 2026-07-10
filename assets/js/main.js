@@ -1,10 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Определение домашней страницы
-  const isHomePage = document.body.classList.contains('home-page');
-
-  initLazyHeroVideo();
-
   // Загружаем шапку и навигацию на всех страницах
   loadHeader();
   loadNav();
@@ -105,23 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     });
-  }
-
-  function initLazyHeroVideo() {
-    if (!isHomePage) return;
-
-    const video = document.querySelector('.video-background video');
-    const source = video ? video.querySelector('source[data-src]') : null;
-    const saveData = navigator.connection && navigator.connection.saveData;
-
-    if (!video || !source || saveData || window.innerWidth < 900) return;
-
-    window.setTimeout(() => {
-      source.src = source.dataset.src;
-      source.removeAttribute('data-src');
-      video.load();
-      video.play().catch(() => {});
-    }, 900);
   }
 
   // Смена фона при наведении в меню навигации
